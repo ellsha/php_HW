@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Записи в таблице{% endblock %}
+
+{% block content %}
+    <div id="wrapper-articles">
+        {% for article in articles %}
+        <div class="article">
+            <div class="article-border"></div>
+            <div class="article-inner-wrapper">
+                <div>#{{article.id}}</div>
+                <div>Date: {{article.date}}</div>
+                <div>Title: {{article.title}}</div>
+                <div>Content: {{article.content}}</div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div id="pagination">
+            {% for i in 1..pageCount %}
+            <a href="?page={{ i }}">{{ i }}</a>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

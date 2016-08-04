@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="./templates/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,500,700,900,400italic,100,500italic,700italic,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <div id="header">
+        <div id="header-inner-wrapper">
+            <a href="/">
+                <div id="bold">SITE</div>
+                <div id="light">in creating</div>
+            </a>
+        </div>
+    </div>
+
+    <div id="menu">
+        <div id="menu-inner-wrapper">
+            <a href="/form">Добавить запись</a>
+            <a href="/">Просмотреть записи</a>
+            <a href="/sign-in">Войти</a>
+            <a href="/sign-out">Выйти</a>
+            <a href="/sign-up">Зарегистрироваться</a>
+        </div>
+    </div>
+
+    <div id="main-block-wrapper">
+
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div id="sidebar">
+            <div id="inner-sidebar">
+                <div id="sidebar-title">
+                    Меню
+                </div>
+                <div class="sidebar-block">
+                    <div class="sidebar-block-title">Название</div>
+                    <div class="sidebar-block-content">Описание</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+
+
+</body>
+</html>
