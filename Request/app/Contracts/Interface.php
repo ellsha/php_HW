@@ -6,6 +6,8 @@
  * Time: 15:38
  */
 
+namespace Contacts;
+
 interface Request
 {
     public function get($key, $default = null);
